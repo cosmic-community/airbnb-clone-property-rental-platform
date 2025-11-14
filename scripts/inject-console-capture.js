@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { glob } = require('glob');
 
 const scriptTag = '<script src="/dashboard-console-capture.js"></script>';
 const buildDir = path.join(process.cwd(), '.next', 'server', 'app');
