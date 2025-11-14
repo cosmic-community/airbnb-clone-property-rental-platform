@@ -17,6 +17,11 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
   const mainPhoto = photos[selectedIndex]
   const thumbnails = photos.slice(0, 5)
 
+  // Safety check for mainPhoto
+  if (!mainPhoto) {
+    return null
+  }
+
   return (
     <div className="grid grid-cols-4 gap-2 rounded-xl overflow-hidden">
       {/* Main Photo */}
